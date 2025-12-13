@@ -1,1 +1,277 @@
-# my-blog
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>manveer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        
+        h1 {
+            font-size: 28px;
+            font-weight: 400;
+            margin-bottom: 40px;
+            color: #000;
+        }
+        
+        h2 {
+            font-size: 18px;
+            font-weight: 400;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #000;
+        }
+        
+        p {
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+        
+        a {
+            color: #000;
+            text-decoration: none;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        a:hover {
+            border-bottom: 1px solid #000;
+        }
+        
+        ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        
+        ul li {
+            margin-bottom: 12px;
+        }
+        
+        .date {
+            color: #666;
+            font-size: 14px;
+            margin-left: 8px;
+        }
+        
+        .profile-photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 4px;
+            object-fit: cover;
+            margin-bottom: 30px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            margin-top: 60px;
+        }
+        
+        .nav {
+            margin-top: 40px;
+            font-size: 16px;
+        }
+        
+        .nav a {
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        
+        footer {
+            margin-top: 80px;
+            font-size: 14px;
+            color: #999;
+        }
+        
+        /* Collapsible sections */
+        .collapsible-content {
+            display: none;
+            overflow: hidden;
+        }
+        
+        .collapsible-content.active {
+            display: block;
+        }
+        
+        /* Footnote references */
+        .footnote-ref {
+            color: #0066cc;
+            text-decoration: none;
+            border-bottom: none;
+            font-size: 0.85em;
+            vertical-align: super;
+        }
+        
+        .footnote-ref:hover {
+            text-decoration: underline;
+        }
+        
+        /* Notes section */
+        .notes {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid #eee;
+        }
+        
+        .notes h2 {
+            margin-bottom: 20px;
+        }
+        
+        .note {
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .note-number {
+            font-weight: 600;
+            color: #000;
+        }
+        
+        /* Image with text layout */
+        .image-text-container {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        
+        .text-side {
+            flex: 1;
+        }
+        
+        .image-side {
+            flex-shrink: 0;
+            text-align: center;
+        }
+        
+        .image-side img {
+            width: 200px;
+            height: auto;
+            border-radius: 4px;
+        }
+        
+        .image-caption {
+            font-size: 12px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        
+        .arrow {
+            font-size: 24px;
+            color: #999;
+            margin: 10px 0;
+        }
+        
+        @media (max-width: 600px) {
+            .image-text-container {
+                flex-direction: column;
+            }
+            
+            .image-side img {
+                width: 160px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>manveer</h1>
+    
+    <h2>essays</h2>
+    <ul>
+        <li>coming soon...</li>
+    </ul>
+    
+    <div class="nav">
+        <a onclick="toggleSection('about')">about</a>
+    </div>
+    
+    <!-- About Section (Hidden by default) -->
+    <div id="about" class="collapsible-content">
+        <div class="section">
+            <h1>about</h1>
+            
+            <img src="https://i.imgur.com/VFW9JjZ.jpeg" alt="manveer" class="profile-photo">
+            
+            <p>19. pursuing bachelors in accounts and finance, cfa from sd college, chandigarh. wanted to go to srcc instead.</p>
+            
+            <p>december 6, 2024 — interviewed at an accelerator<a href="#note1" class="footnote-ref">[1]</a>, got selected. started january 2nd as investment analyst, looking after a fund that backs early stage startups<a href="#note2" class="footnote-ref">[2]</a>. i play my little role there.</p>
+            
+            <p>after six months, began building investor.to<a href="#note3" class="footnote-ref">[3]</a>. what i thought would be one of my biggest regrets turned out to be one of my biggest achievements.</p>
+            
+            <p>class 12th scores: 98 in accountancy, topped in economics and business studies. flexing? maybe. earned it? definitely.</p>
+            
+            <p>i like to read everything — essays, reports, research, publications, books. mostly non-fiction. occasionally anna huang type stuff.</p>
+            
+            <p>virat is the best cricketer to exist. coldplay is the best band to exist. these are facts, not opinions.</p>
+            
+            <p>if you've cared enough to read this far, go check out some essays i've put my soul into. or leave a comment telling me how great my writing is. why not?</p>
+            
+            <h2 style="cursor: pointer;" onclick="toggleSection('why-section')">why this page looks like this</h2>
+            
+            <div id="why-section" class="collapsible-content">
+            <div class="image-text-container">
+                <div class="text-side">
+                    <p>most sites are designed to impress. this one is designed to be read.</p>
+                    <p>no tracking. no analytics. no newsletter pop-ups. no dark patterns. just words and ideas.</p>
+                    <p>the web used to be simple. text, links, thoughts. before everything became optimized for engagement and conversion.</p>
+                    <p>this is a return to that. a place for thinking, not performing.</p>
+                </div>
+                <div class="image-side">
+                    <div class="arrow">↓</div>
+                    <img src="https://i.imgur.com/bCQyTTD.jpeg" alt="original thought">
+                    <div class="image-caption">original thought</div>
+                </div>
+            </div>
+            </div>
+            
+            <div class="nav">
+                <a href="mailto:manveersinghgoomer@gmail.com">email</a>
+                <a href="https://instagram.com/mannveeeeer" target="_blank">instagram</a>
+                <a href="https://linkedin.com/in/manveeeersingh" target="_blank">linkedin</a>
+            </div>
+            
+            <!-- Notes Section -->
+            <div class="notes">
+                <h2>notes</h2>
+                
+                <div class="note" id="note1">
+                    <span class="note-number">[1]</span> The accelerator program focused on early-stage founders building in fintech and consumer technology. Selection rate was approximately 8% from over 200 applications across South Asia.
+                </div>
+                
+                <div class="note" id="note2">
+                    <span class="note-number">[2]</span> The fund typically invests between $50K-$500K in pre-seed and seed stage companies, with a focus on technology-enabled businesses with strong founder-market fit.
+                </div>
+                
+                <div class="note" id="note3">
+                    <span class="note-number">[3]</span> investor.to is a platform connecting retail investors with curated investment opportunities. Built with the hypothesis that information asymmetry in early-stage investing could be solved through better tooling and community.
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        © 2026
+    </footer>
+    
+    <script>
+        function toggleSection(id) {
+            const section = document.getElementById(id);
+            section.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
