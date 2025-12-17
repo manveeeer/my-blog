@@ -67,8 +67,8 @@
         }
         
         .profile-photo {
-            width: 160px;
-            height: 160px;
+            width: 240px;
+            height: 240px;
             border-radius: 4px;
             object-fit: cover;
             margin-bottom: 30px;
@@ -120,13 +120,15 @@
         
         /* Notes section */
         .notes {
-            margin-top: 60px;
-            padding-top: 40px;
+            margin-top: 40px;
+            padding-top: 30px;
             border-top: 1px solid #eee;
+            margin-bottom: 40px;
         }
         
         .notes h2 {
             margin-bottom: 20px;
+            margin-top: 0;
         }
         
         .note {
@@ -143,8 +145,8 @@
         /* Image with text layout */
         .image-text-container {
             display: flex;
-            gap: 30px;
-            align-items: flex-start;
+            gap: 20px;
+            align-items: center;
             margin-bottom: 30px;
         }
         
@@ -173,7 +175,9 @@
         .arrow {
             font-size: 24px;
             color: #999;
-            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
         }
         
         @media (max-width: 600px) {
@@ -183,6 +187,10 @@
             
             .image-side img {
                 width: 160px;
+            }
+            
+            .arrow {
+                transform: rotate(90deg);
             }
         }
     </style>
@@ -197,9 +205,10 @@
     
     <div class="nav">
         <a onclick="toggleSection('about')">about</a>
+        <a onclick="toggleSection('why-section')">why this page looks like this</a>
     </div>
     
-    <!-- About Section (Hidden by default) -->
+    <!-- About Section -->
     <div id="about" class="collapsible-content">
         <div class="section">
             <h1>about</h1>
@@ -220,30 +229,6 @@
             
             <p>if you've cared enough to read this far, go check out some essays i've put my soul into. or leave a comment telling me how great my writing is. why not?</p>
             
-            <h2 style="cursor: pointer;" onclick="toggleSection('why-section')">why this page looks like this</h2>
-            
-            <div id="why-section" class="collapsible-content">
-            <div class="image-text-container">
-                <div class="text-side">
-                    <p>most sites are designed to impress. this one is designed to be read.</p>
-                    <p>no tracking. no analytics. no newsletter pop-ups. no dark patterns. just words and ideas.</p>
-                    <p>the web used to be simple. text, links, thoughts. before everything became optimized for engagement and conversion.</p>
-                    <p>this is a return to that. a place for thinking, not performing.</p>
-                </div>
-                <div class="image-side">
-                    <div class="arrow">↓</div>
-                    <img src="https://i.imgur.com/bCQyTTD.jpeg" alt="original thought">
-                    <div class="image-caption">original thought</div>
-                </div>
-            </div>
-            </div>
-            
-            <div class="nav">
-                <a href="mailto:manveersinghgoomer@gmail.com">email</a>
-                <a href="https://instagram.com/mannveeeeer" target="_blank">instagram</a>
-                <a href="https://linkedin.com/in/manveeeersingh" target="_blank">linkedin</a>
-            </div>
-            
             <!-- Notes Section -->
             <div class="notes">
                 <h2>notes</h2>
@@ -258,6 +243,33 @@
                 
                 <div class="note" id="note3">
                     <span class="note-number">[3]</span> investor.to is a platform connecting retail investors with curated investment opportunities. Built with the hypothesis that information asymmetry in early-stage investing could be solved through better tooling and community.
+                </div>
+            </div>
+            
+            <div class="nav" style="border-top: 1px solid #eee; padding-top: 20px;">
+                <a href="mailto:manveersinghgoomer@gmail.com">email</a>
+                <a href="https://instagram.com/mannveeeeer" target="_blank">instagram</a>
+                <a href="https://linkedin.com/in/manveeeersingh" target="_blank">linkedin</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Why Section (separate, same level as About) -->
+    <div id="why-section" class="collapsible-content">
+        <div class="section">
+            <h1>why this page looks like this</h1>
+            
+            <div class="image-text-container">
+                <div class="text-side">
+                    <p>most sites are designed to impress. this one is designed to be read.</p>
+                    <p>no tracking. no analytics. no newsletter pop-ups. no dark patterns. just words and ideas.</p>
+                    <p>the web used to be simple. text, links, thoughts. before everything became optimized for engagement and conversion.</p>
+                    <p>this is a return to that. a place for thinking, not performing.</p>
+                </div>
+                <div class="arrow">→</div>
+                <div class="image-side">
+                    <img src="https://i.imgur.com/bCQyTTD.jpeg" alt="original thought">
+                    <div class="image-caption">original thought</div>
                 </div>
             </div>
         </div>
